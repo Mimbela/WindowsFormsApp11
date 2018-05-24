@@ -17,20 +17,20 @@ namespace WindowsFormsApp11
         public Form2()
         {
             InitializeComponent();
+            
         }
         //es el formulario importante
         public void CalcularMedia(decimal valor1, decimal valor2, decimal valor3){ //hago metodo para la suma
-
+            
             decimal suma = decimal.Round (valor1) + decimal.Round( valor2 )+ decimal.Round (valor3); //decimal.round redondea el decimal
              media = decimal.Round (suma / 3);
 
-            txtNedia.Text  = media.ToString();
             ImprimirNota();
-
         }
 
         private void ImprimirNota()
         {
+            txtNedia.Text  = media.ToString();
             if (media>=5)
             {
                 //has aprobado
@@ -49,10 +49,10 @@ namespace WindowsFormsApp11
             Close();
         }
 
-        public void RecibirNombre (string nomb, string apell)
-    {
+        public void RecibirNombre(string nomb, string apell)
+        {
             nombre = nomb;
             apellido = apell;
-    }
+        }
     }
 }
